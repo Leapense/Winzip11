@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="7794848.png" />
+    <None Remove="Screenshot 2022-04-28 212242.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MicaWPF" Version="2.0.0" />
+    <PackageReference Include="WPF-UI" Version="1.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="7794848.png" />
+    <Resource Include="Screenshot 2022-04-28 212242.png" />
+  </ItemGroup>
+
+</Project>

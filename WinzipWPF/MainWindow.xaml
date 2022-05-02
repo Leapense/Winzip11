@@ -1,0 +1,52 @@
+﻿<mica:MicaWindow x:Class="WinzipWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WinzipWPF"
+        xmlns:wpfui="clr-namespace:WPFUI.Controls;assembly=WPFUI"
+        mc:Ignorable="d"
+        xmlns:mica="clr-namespace:MicaWPF.Controls;assembly=MicaWPF"
+        Title="MainWindow" Height="650" Width="1000" WindowStyle="SingleBorderWindow" FontFamily="Segoe UI Variable Display" ResizeMode="CanMinimize" Theme="Dark">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="240*"/>
+            <RowDefinition Height="210*"/>
+            <RowDefinition Height="73*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Height="36" VerticalAlignment="Center" Grid.Row="1">
+            <wpfui:Button Content="Find Zip" Background="#7F000000" HorizontalAlignment="Left" Height="36" Width="99" FontSize="16" BorderThickness="0,0,0,0" Padding="0,0,0,0" Foreground="White" Click="Button_Click" Margin="127,0,0,0"/>
+            <wpfui:Button Content="Find 7z" Background="#7F000000" HorizontalAlignment="Left" Height="36" Width="99" FontSize="16" BorderThickness="0,0,0,0" Padding="0,0,0,0" Foreground="White" Margin="228,0,0,0" Click="Button_Click_1"/>
+            <Label Content="Need Help?" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center" Foreground="White"/>
+        </Grid>
+        <Grid Height="40" VerticalAlignment="Center" Margin="0,0,428,0">
+            <Label Content="WinZip 11" HorizontalAlignment="Left" Margin="10,0,0,0" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center" Foreground="White"/>
+            <wpfui:Button FontSize="8" Content="Changelog" HorizontalAlignment="Left" Margin="114,0,0,0" Height="20" Background="#FF545454" Foreground="White" Padding="0,0,0,0" Width="77"/>
+
+        </Grid>
+        <Label x:Name="Met1" Content="'Find Zip' is you need to find zip file" HorizontalAlignment="Left" Margin="808,20,0,0" Grid.Row="2" VerticalAlignment="Top" Height="20" Width="182" Visibility="Hidden"/>
+        <Label x:Name="Met2" Content="'Find 7z' is you need to find 7z file" HorizontalAlignment="Left" Margin="816,58,0,0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="174" Grid.RowSpan="2" Visibility="Hidden"/>
+        <Grid Grid.Row="4" Background="#7F000000">
+            <wpfui:Button FontFamily="Segoe Fluent Icons" Icon="FolderOpen24" IconFilled="True" Height="41" Margin="10,0,950,0" Padding="0,0,0,0" BorderBrush="{x:Null}" FontSize="28"/>
+            <wpfui:Button x:Name="Secret" Content="Next" HorizontalAlignment="Left" Margin="900,0,0,0" Click="Button_Click_2"/>
+            <wpfui:Button x:Name="Secret2" Content="Back" HorizontalAlignment="Left" Margin="805,0,0,0" Click="Secret2_Click"/>
+            <wpfui:Button x:Name="OpenfromDoc" Content="My Documents" HorizontalAlignment="Left" Margin="55,0,0,0" Height="41" Background="#FF4E8DC7" Foreground="White" Click="OpenfromDoc_Click"/>
+            <wpfui:Button x:Name="OpenfromDown" Content="My Downloads" HorizontalAlignment="Left" Margin="212,0,0,0" Height="41" Background="#FF4E8DC7" Foreground="White" Click="OpenfromDown_Click"/>
+            <wpfui:Button Content="My Music" HorizontalAlignment="Left" Margin="366,0,0,0" Height="41" Background="#FF4E8DC7" Foreground="White"/>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,58,0,73" Grid.RowSpan="4">
+            <Label Content="Step 1. Click the File Icon on Bottom Left / Then you need to choose Zip/7z File." HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Top" Foreground="White" Width="686"/>
+            <Label Content="Step 2. Choose Where you want to extract." HorizontalAlignment="Left" Margin="10,56,0,0" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Top" Foreground="White" Width="686"/>
+            <wpfui:Button Content="Extract as ..." Background="#3F000000" HorizontalAlignment="Left" Height="36" Width="146" FontSize="16" BorderThickness="0,0,0,0" Padding="0,0,0,0" Foreground="White" Margin="17,86,0,0" VerticalAlignment="Top"/>
+            <Label Content="Step 3. You can view on directly in extract path. (Admin required, and WIP)" HorizontalAlignment="Left" Margin="10,133,0,0" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Top" Foreground="White" Width="686"/>
+        </Grid>
+        <wpfui:Button FontSize="8" Content="Comments?" HorizontalAlignment="Left" Margin="903,26,0,0" Height="20" Background="#FF545454" Foreground="White" Padding="0,0,0,0" Width="77" VerticalAlignment="Top"/>
+        <Grid Grid.Row="3">
+            <TreeView/>
+        </Grid>
+
+    </Grid>
+</mica:MicaWindow>
